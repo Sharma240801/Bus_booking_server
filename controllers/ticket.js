@@ -28,14 +28,14 @@ export const getUserTicket = async (req, res) => {
 
 export const bookTicket = async (req, res) => {
     try {
-        const { busId, date, seatNumber } = req.body
-        const userId = req.userId
+        const { busId, date, seatNumber } = req.body;
+        const userId = req.userId;
 
         if (!busId || !date || !seatNumber || seatNumber.length === 0) {
             return res.status(400).json({ error: "All fields are required." });
         }
 
-        const bus = await Bus.findOne({ busId })
+        const bus = await Bus.findOne({ busId });
         if (!bus) {
             return res.status(404).json({ error: "Bus not found" })
         }

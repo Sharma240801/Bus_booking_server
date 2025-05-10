@@ -2,7 +2,7 @@ import Bus from "../models/bus.js";
 
 export const getBusDetails = async(req, res)=> {
     try {
-        const {busId} = req.params
+        const { busId } = req.params;
         if(!busId){
             return res.status(400).json({ error: 'Bus ID is required'})
         }

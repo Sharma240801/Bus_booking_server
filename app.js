@@ -41,7 +41,7 @@ try {
       console.log(err);
     }else{
       console.log(`Server started on http://localhost:${PORT}/admin`)
-    }
+      }
   })
 } catch (error) {
   console.log('Error starting server-->', error)
